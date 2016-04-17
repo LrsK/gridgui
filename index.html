@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Draggable - Default functionality</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://creativecouple.github.com/jquery-timing/jquery-timing.min.js"></script>
+	<script src="jquery.connections.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="container">
+	</div>
+	<ul class='element-menu'>
+		<li data-action="renameProcessor">Rename</li>
+		<li data-action="createOutput">Create output</li>
+	</ul>
+	<ul class='create-menu'>
+		<li data-action="newProcessor">Create new processor</li>
+	</ul>
+	<div id="createProcessor-dialog-form" title="Create new processor">
+		<form>
+			<fieldset>
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all">
+			<!-- Allow form submission with keyboard without duplicating the dialog button -->
+			<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+			</fieldset>
+		</form>
+	</div>
+	<div id="rename-dialog-form" title="Rename element">
+		<form>
+			<fieldset>
+			<label for="newName">Name</label>
+			<input type="text" name="newName" id="newName" value="" class="text ui-widget-content ui-corner-all">
+			<!-- Allow form submission with keyboard without duplicating the dialog button -->
+			<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+			</fieldset>
+		</form>
+	</div>
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
